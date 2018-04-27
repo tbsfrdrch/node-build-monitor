@@ -11,7 +11,9 @@ module.exports = function () {
         },
         buildProjectPipelinesUrl = function(projectId, ref) {
             var url = self.config.url + '/api/v4/projects/' + projectId + '/pipelines';
-            if(ref) { url = url + '?ref=' + ref; }
+            if (ref) {
+                url = ref === "*/*" ? url + '?scope=branches' : url + '?ref=' + ref;
+            }
             return url;
         },
         buildPipelineDetailsUrl = function(projectId, pipelineId) {
