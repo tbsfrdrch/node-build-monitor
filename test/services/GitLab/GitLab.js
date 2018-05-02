@@ -20,7 +20,7 @@ describe('GitLab service', function () {
             requestStub = {
                 defaults: sinon.stub()
             };
-            var gitlabModule = rewire('../../app/services/GitLab');
+            var gitlabModule = rewire('../../../app/services/GitLab');
             gitlabModule.__set__('request', requestStub);
 
             gitlab = new gitlabModule();
