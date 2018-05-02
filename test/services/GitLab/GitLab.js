@@ -14,7 +14,7 @@ describe('GitLab service', function () {
 
         beforeEach(function () {
             // Set path to dummy CA cert
-            this.caPath = path.resolve(__dirname, 'data', 'ca.pem');
+            this.caPath = path.resolve(__dirname, '..', 'data', 'ca.pem');
 
             // Stub out request module in GitLab module
             requestStub = {
